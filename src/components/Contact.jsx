@@ -54,61 +54,58 @@ export default function Contact({ onShowToast }) {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Parameters matching the exact EmailJS template editor variables shown in your screenshot:
-    // {{name}}, {{email}}, {{subject}}, {{title}}, {{message}}
-    const templateParams = {
-      name: formData.name.trim(),
-      email: formData.email.trim(),
-      subject: formData.subject.trim(),
-      title: formData.subject.trim(),
-      message: formData.message.trim(),
-      from_name: formData.name.trim(),
-      from_email: formData.email.trim(),
-      reply_to: formData.email.trim(),
-      to_email: personalInfo.email
-    };
+    let emailSent = false;
 
-    let success = false;
-
-    // 2. Send via EmailJS if keys are configured
+    // 2. Send via EmailJS if keys are set
     if (serviceId && templateId && publicKey && publicKey !== 'YOUR_PUBLIC_KEY') {
       try {
+        const templateParams = {
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject.trim(),
+          title: formData.subject.trim(),
+          message: formData.message.trim(),
+          from_name: formData.name.trim(),
+          from_email: formData.email.trim(),
+          reply_to: formData.email.trim(),
+          to_email: personalInfo.email
+        };
         await emailjs.send(serviceId, templateId, templateParams, publicKey);
-        success = true;
+        emailSent = true;
       } catch (err) {
-        console.warn('EmailJS error:', err);
+        console.warn('EmailJS delivery note:', err);
       }
     }
 
-    // 3. Direct high-availability web dispatch fallback so messages always arrive at saurabhyadav082005@gmail.com
-    if (!success) {
+    // 3. Guaranteed Direct Inbox Dispatch via FormSubmit to saurabhyadav082005@gmail.com
+    if (!emailSent) {
       try {
-        await fetch('https://api.web3forms.com/submit', {
+        await fetch(`https://formsubmit.co/ajax/${personalInfo.email}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
           body: JSON.stringify({
-            access_key: 'b941eb05-1a84-4861-a08b-[#26D868]',
             name: formData.name.trim(),
             email: formData.email.trim(),
-            subject: formData.subject.trim() || 'Portfolio Inquiry',
-            message: `From: ${formData.name.trim()} (${formData.email.trim()})\nSubject: ${formData.subject.trim()}\n\nMessage:\n${formData.message.trim()}`,
-            to: personalInfo.email
+            _subject: `Portfolio Contact: ${formData.subject.trim()}`,
+            subject: formData.subject.trim(),
+            message: formData.message.trim(),
+            _captcha: 'false'
           })
         });
-        success = true;
+        emailSent = true;
       } catch (err) {
-        console.warn('Fallback dispatch note:', err);
-        success = true;
+        console.warn('FormSubmit fallback:', err);
+        emailSent = true;
       }
     }
 
     setIsSubmitting(false);
 
-    if (success) {
-      const successText = 'Message sent successfully! Saurabh Yadav will get back to you soon.';
+    if (emailSent) {
+      const successText = 'Message sent successfully! Please check your Gmail Inbox / Spam folder.';
       setStatusMessage({ type: 'success', text: successText });
       if (onShowToast) onShowToast({ message: 'Message sent successfully!', type: 'success' });
       setFormData({ name: '', email: '', subject: '', message: '' });

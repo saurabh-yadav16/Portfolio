@@ -26,11 +26,11 @@ export const personalInfo = {
 };
 
 export const heroContent = {
-  heading: "Building scalable full-stack applications with real-time experiences.",
+  heading: "Building scalable full-stack applications with real-time experiences & AI developer tools.",
   supportingText: "Hi, I'm Saurabh Yadav — a Computer Science undergraduate and Full-Stack Developer with hands-on experience building full-stack web applications using React, TypeScript, Node.js, Express.js, MySQL, and Prisma.",
   primaryCta: "View Projects",
   secondaryCta: "Download Resume",
-  badges: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Prisma", "TypeScript", "Socket.IO"]
+  badges: ["React.js", "Node.js", "Express.js", "MongoDB", "AI Engine", "MySQL", "TypeScript", "Socket.IO"]
 };
 
 export const aboutContent = {
@@ -49,6 +49,12 @@ export const principles = [
     icon: "Layers"
   },
   {
+    id: "ai-systems",
+    title: "AI-Powered Systems",
+    description: "Engineering intelligent multi-metric evaluation engines, ATS resume analyzers, and automated technical interview coaching tools.",
+    icon: "Bot"
+  },
+  {
     id: "real-time",
     title: "Real-Time Systems",
     description: "Developing real-time experiences using Socket.IO, including synchronized YouTube playback, live chat, and donation status tracking.",
@@ -59,16 +65,40 @@ export const principles = [
     title: "Secure Backend Development",
     description: "Implementing REST APIs, JWT authentication, role-based access control (RBAC), GitHub OAuth, and reliable backend workflows.",
     icon: "ShieldCheck"
-  },
-  {
-    id: "problem-solving",
-    title: "Problem Solving & Core CS",
-    description: "Applying Data Structures and Algorithms with Java, C, OOP, DBMS, Operating Systems, and Computer Networks.",
-    icon: "Cpu"
   }
 ];
 
 export const projects = [
+  {
+    id: "ai-interview-coach",
+    title: "AI Interview Coach",
+    subtitle: "Smart AI-Powered Technical Mock Interview & ATS Platform",
+    featured: true,
+    description: "Built a production-ready full-stack MERN platform that helps software engineers prepare for technical interviews using AI question evaluation, ATS resume analysis, and custom performance feedback.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "AI Engine", "Tailwind CSS", "JWT", "REST API", "Vite"],
+    github: "https://github.com/saurabh-yadav16/AI-Interview-Coach",
+    liveDemo: "https://ai-interview-coach-eta-sandy.vercel.app/",
+    features: [
+      "Implemented a 5-dimension AI rubric scoring engine evaluating candidate responses on Correctness (30%), Technical Depth (25%), Completeness (20%), Relevance (15%), and Clarity (10%).",
+      "Built ATS resume analyzer & parser to extract candidate skills, generate role-specific mock questions, and create custom 7-day interview improvement roadmaps.",
+      "Designed a sleek glassmorphic MERN SaaS interface with JWT authentication, real-time analytics radar charts, and MongoDB data persistence."
+    ],
+    caseStudy: {
+      overview: "AI Interview Coach is a full-stack MERN SaaS platform engineered to deliver automated, rubric-driven technical interview evaluations and ATS resume feedback.",
+      problem: "Software engineering applicants lack affordable, instant technical mock interview feedback calibrated to real hiring rubrics.",
+      solution: "Engineered a 5-metric AI evaluation engine coupled with an ATS resume parser to grade candidate answers and generate personalized 7-day technical prep roadmaps.",
+      myRole: "Full-Stack Developer — Built Express AI rubric engine, ATS parser pipeline, JWT auth middleware, and React SaaS dashboard.",
+      architecture: [
+        "React + Vite Frontend -> Axios REST Client -> Radar Analytics Chart UI",
+        "Express Backend -> AI Evaluation Engine -> ATS Resume Parser",
+        "MongoDB -> Candidate Session & Rubric Scoring Store"
+      ],
+      challenges: [
+        "Designing deterministic 5-metric rubric scoring prompts to avoid AI scoring variance.",
+        "Extracting clean text and technical skills from diverse PDF and DOCX resume layouts."
+      ]
+    }
+  },
   {
     id: "syncparty",
     title: "SyncParty",
@@ -172,8 +202,8 @@ export const techStackCategories = [
     skills: ["React.js", "Tailwind CSS", "HTML5", "CSS3", "EJS", "Responsive UI Development"]
   },
   {
-    category: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "Socket.IO"]
+    category: "Backend & AI",
+    skills: ["Node.js", "Express.js", "REST APIs", "Socket.IO", "AI Evaluation Engines"]
   },
   {
     category: "Databases",
@@ -195,7 +225,7 @@ export const techStackCategories = [
 
 export const skillBadges = [
   "React.js", "TypeScript", "Node.js", "Express.js", "MongoDB", "MySQL", "Prisma",
-  "Java", "C", "JavaScript", "Socket.IO", "JWT", "GitHub OAuth",
+  "Java", "C", "JavaScript", "Socket.IO", "JWT", "AI Evaluation Engine", "GitHub OAuth",
   "Git", "GitHub", "Tailwind CSS", "REST APIs", "Data Structures & Algorithms", "OOP", "DBMS"
 ];
 
