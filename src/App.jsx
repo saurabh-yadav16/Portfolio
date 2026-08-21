@@ -19,17 +19,7 @@ import { personalInfo, projects as defaultProjects } from './data/portfolioData'
 export default function App() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [toast, setToast] = useState(null);
-  const [projectList, setProjectList] = useState(() => {
-    const saved = localStorage.getItem('saurabh_projects');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        return defaultProjects;
-      }
-    }
-    return defaultProjects;
-  });
+  const [projectList, setProjectList] = useState(defaultProjects);
 
   const showToast = ({ message, type = 'success' }) => {
     setToast({ message, type });
