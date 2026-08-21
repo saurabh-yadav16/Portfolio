@@ -13,7 +13,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
 import AnimatedBackground from './components/AnimatedBackground';
-import { personalInfo, projects as defaultProjects } from './data/portfolioData';
+import { projects as defaultProjects } from './data/portfolioData';
 
 export default function App() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
@@ -25,20 +25,6 @@ export default function App() {
     setTimeout(() => {
       setToast(null);
     }, 4000);
-  };
-
-  const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = personalInfo.resumeUrl;
-    link.download = 'Saurabh_Yadav_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    showToast({
-      message: 'Downloading Saurabh Yadav Resume PDF...',
-      type: 'success'
-    });
   };
 
   const handleAddProject = (newProject) => {
@@ -77,11 +63,11 @@ export default function App() {
       <Toast toast={toast} onClose={() => setToast(null)} />
 
       {/* Navigation Header */}
-      <Navbar onDownloadResume={handleDownloadResume} />
+      <Navbar />
 
       {/* Main Content Sections */}
       <main className="relative z-10">
-        <Hero onDownloadResume={handleDownloadResume} />
+        <Hero />
         <About />
         <Education />
         <Principles />

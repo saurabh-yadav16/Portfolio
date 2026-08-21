@@ -2,29 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
-export default function Navbar({ onDownloadResume }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
 
-      const sections = ['hero', 'about', 'education', 'principles', 'projects', 'stack', 'skills', 'certifications', 'contact'];
+      const sections = ['hero', 'about', 'education', 'projects', 'stack', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
           if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
+            setActiveSection(sectionId);
             break;
           }
         }
@@ -36,42 +32,37 @@ export default function Navbar({ onDownloadResume }) {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Stack', href: '#stack', id: 'stack' },
-    { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { id: 'hero', name: 'Home', href: '#hero' },
+    { id: 'about', name: 'About', href: '#about' },
+    { id: 'education', name: 'Education', href: '#education' },
+    { id: 'projects', name: 'Projects', href: '#projects' },
+    { id: 'stack', name: 'Tech Stack', href: '#stack' },
+    { id: 'contact', name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-[#0b0f19]/90 backdrop-blur-md border-b border-slate-800/80 py-3.5 shadow-2xl' 
-        : 'bg-transparent py-5'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0b0f19]/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-xl' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo with Profile Avatar */}
-          <a 
-            href="#hero" 
-            className="flex items-center gap-3 group"
-          >
-            <div className="relative">
-              <img 
-                src={personalInfo.profileImage}
-                alt={personalInfo.name}
-                className="w-10 h-10 rounded-full object-cover border-2 border-[#26D868] shadow-md shadow-[#26D868]/20 group-hover:scale-105 transition-transform"
-              />
-              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#26D868] rounded-full border-2 border-[#0b0f19]" />
+          {/* Logo / Brand Name */}
+          <a href="#hero" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#26D868] via-emerald-500 to-teal-400 p-[1px] shadow-lg shadow-[#26D868]/20 transition-transform group-hover:scale-105">
+              <div className="w-full h-full bg-[#0b0f19] rounded-[11px] flex items-center justify-center">
+                <span className="font-mono font-black text-lg text-[#26D868] group-hover:text-white transition-colors">SY</span>
+              </div>
             </div>
-            <div className="flex items-center gap-1 font-mono font-bold text-lg tracking-tight text-slate-100 group-hover:text-[#26D868] transition-colors">
-              <span className="text-[#26D868]">&lt;/</span>
-              <span className="text-white">saurabh</span>
-              <span className="text-[#26D868]">&gt;</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#26D868] transition-colors">
+                Saurabh<span className="text-[#26D868]">.dev</span>
+              </span>
+              <span className="text-[10px] text-slate-400 font-mono block -mt-1">
+                Full-Stack Software Engineer
+              </span>
             </div>
           </a>
 
-          {/* Desktop Links */}
+          {/* Desktop Nav Items */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center gap-6">
               {navLinks.map((link) => (
@@ -88,14 +79,6 @@ export default function Navbar({ onDownloadResume }) {
                 </a>
               ))}
             </div>
-
-            <button
-              onClick={onDownloadResume}
-              className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-slate-900 border border-slate-700 hover:border-[#26D868] hover:text-[#26D868] rounded-lg transition-all shadow-md"
-            >
-              <FileText className="w-3.5 h-3.5" />
-              <span>Resume</span>
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -130,18 +113,6 @@ export default function Navbar({ onDownloadResume }) {
                 {link.name}
               </a>
             ))}
-            <div className="pt-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onDownloadResume();
-                }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-slate-950 bg-[#26D868] rounded-lg shadow-lg"
-              >
-                <FileText className="w-4 h-4" />
-                <span>Download Resume</span>
-              </button>
-            </div>
           </div>
         </div>
       )}
