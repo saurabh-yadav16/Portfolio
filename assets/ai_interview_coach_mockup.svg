@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#110d1f"/>
+      <stop offset="50%" stop-color="#1c1333"/>
+      <stop offset="100%" stop-color="#110d1f"/>
+    </linearGradient>
+    <linearGradient id="ai-purple-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="ai-card-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.2)"/>
+      <stop offset="100%" stop-color="rgba(59, 130, 246, 0.05)"/>
+    </linearGradient>
+    <filter id="shadow-ai" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg-grad-ai)"/>
+  <circle cx="250" cy="180" r="280" fill="#a855f7" opacity="0.1" filter="blur(60px)"/>
+  <circle cx="950" cy="580" r="260" fill="#3b82f6" opacity="0.1" filter="blur(60px)"/>
+
+  <!-- Main Container -->
+  <g filter="url(#shadow-ai)" transform="translate(60, 50)">
+    <rect width="1080" height="650" rx="16" fill="#171226" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#201a36"/>
+    <rect y="36" width="1080" height="12" fill="#201a36"/>
+    <circle cx="30" cy="24" r="6" fill="#ff5f56"/>
+    <circle cx="50" cy="24" r="6" fill="#ffbd2e"/>
+    <circle cx="70" cy="24" r="6" fill="#27c93f"/>
+    <text x="540" y="29" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">AI Interview Coach • OpenAI API Integration & ATS Analysis</text>
+    
+    <rect x="910" y="14" width="140" height="22" rx="11" fill="rgba(168, 85, 247, 0.2)"/>
+    <circle cx="924" cy="25" r="4" fill="#a855f7"/>
+    <text x="935" y="29" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">GPT-4o ENGINES READY</text>
+
+    <!-- Top Score Overview -->
+    <g transform="translate(24, 70)">
+      <rect width="1032" height="110" rx="12" fill="#201838" stroke="rgba(255,255,255,0.06)"/>
+      <rect width="1032" height="110" rx="12" fill="url(#ai-card-glow)"/>
+      
+      <!-- Overall AI Score Gauge -->
+      <circle cx="80" cy="55" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+      <circle cx="80" cy="55" r="40" fill="none" stroke="url(#ai-purple-blue)" stroke-width="8" stroke-dasharray="251" stroke-dashoffset="30"/>
+      <text x="80" y="61" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800" text-anchor="middle">92%</text>
+
+      <text x="140" y="42" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Interview Readiness Score: Excellent</text>
+      <text x="140" y="66" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">Evaluated across 5 Core Metrics: Technical Depth, Relevance, Completeness, Correctness, & Clarity</text>
+      <text x="140" y="88" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Candidate Target: Senior Full-Stack / MERN Software Engineer</text>
+
+      <!-- ATS Score Badge -->
+      <rect x="860" y="25" width="145" height="60" rx="10" fill="rgba(59, 130, 246, 0.2)"/>
+      <text x="932" y="48" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">ATS Match Rate</text>
+      <text x="932" y="74" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="24" font-weight="800" text-anchor="middle">96 / 100</text>
+    </g>
+
+    <!-- 5 Performance Metrics Breakdown (Left 50%) -->
+    <g transform="translate(24, 200)">
+      <rect width="504" height="420" rx="12" fill="#201838" stroke="rgba(255,255,255,0.06)"/>
+      <text x="24" y="36" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="16" font-weight="700">5-Metric AI Evaluation Breakdown</text>
+
+      <!-- Metric 1: Technical Depth -->
+      <g transform="translate(24, 60)">
+        <text x="0" y="16" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">1. Technical Depth & Concepts</text>
+        <text x="410" y="16" fill="#a855f7" font-family="system-ui, sans-serif" font-size="13" font-weight="700">95%</text>
+        <rect y="26" width="450" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect y="26" width="427" height="8" rx="4" fill="url(#ai-purple-blue)"/>
+      </g>
+
+      <!-- Metric 2: Correctness -->
+      <g transform="translate(24, 130)">
+        <text x="0" y="16" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">2. Algorithmic Correctness</text>
+        <text x="410" y="16" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">92%</text>
+        <rect y="26" width="450" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect y="26" width="414" height="8" rx="4" fill="#3b82f6"/>
+      </g>
+
+      <!-- Metric 3: Completeness -->
+      <g transform="translate(24, 200)">
+        <text x="0" y="16" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">3. Answer Completeness</text>
+        <text x="410" y="16" fill="#10b981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">90%</text>
+        <rect y="26" width="450" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect y="26" width="405" height="8" rx="4" fill="#10b981"/>
+      </g>
+
+      <!-- Metric 4: Relevance -->
+      <g transform="translate(24, 270)">
+        <text x="0" y="16" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">4. Contextual Relevance</text>
+        <text x="410" y="16" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="700">94%</text>
+        <rect y="26" width="450" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect y="26" width="423" height="8" rx="4" fill="#f59e0b"/>
+      </g>
+
+      <!-- Metric 5: Clarity -->
+      <g transform="translate(24, 340)">
+        <text x="0" y="16" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">5. Communication Clarity</text>
+        <text x="410" y="16" fill="#ec4899" font-family="system-ui, sans-serif" font-size="13" font-weight="700">88%</text>
+        <rect y="26" width="450" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect y="26" width="396" height="8" rx="4" fill="#ec4899"/>
+      </g>
+    </g>
+
+    <!-- Personalized 7-Day Improvement Plan (Right 50%) -->
+    <g transform="translate(552, 200)">
+      <rect width="504" height="420" rx="12" fill="#201838" stroke="rgba(255,255,255,0.06)"/>
+      <text x="24" y="36" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Personalized 7-Day Growth Plan</text>
+
+      <g transform="translate(24, 60)">
+        <!-- Day 1-2 -->
+        <rect width="456" height="68" rx="8" fill="rgba(255,255,255,0.04)"/>
+        <text x="16" y="26" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Day 1-2: System Design & MERN Optimization</text>
+        <text x="16" y="48" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Focus on MongoDB indexing & Socket.IO real-time scaling</text>
+
+        <!-- Day 3-4 -->
+        <rect y="80" width="456" height="68" rx="8" fill="rgba(255,255,255,0.04)"/>
+        <text x="16" y="106" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Day 3-4: Data Structures & Java Optimization</text>
+        <text x="16" y="128" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Practice graph algorithms, dynamic programming & time complexity</text>
+
+        <!-- Day 5-6 -->
+        <rect y="160" width="456" height="68" rx="8" fill="rgba(255,255,255,0.04)"/>
+        <text x="16" y="186" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Day 5-6: JWT Authentication & Security Deep-Dive</text>
+        <text x="16" y="208" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Review RBAC, bcrypt hashing, and REST security practices</text>
+
+        <!-- Day 7 -->
+        <rect y="240" width="456" height="68" rx="8" fill="rgba(168, 85, 247, 0.15)"/>
+        <text x="16" y="266" fill="#f0abfc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Day 7: Final AI Mock Interview Simulation</text>
+        <text x="16" y="288" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="12">Full live technical interview evaluation with GPT-4o voice & text</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,35 +1,742 @@
-<!doctype html>
-<html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Yadav | Full-Stack Developer & Software Engineer</title>
+    <meta name="description" content="Portfolio of Saurabh Yadav, a Computer Science undergraduate and Full-Stack Developer building modern, secure, and real-time web applications.">
     
-    <!-- Primary Meta Tags -->
-    <title>Saurabh Yadav | Full-Stack Developer</title>
-    <meta name="title" content="Saurabh Yadav | Full-Stack Developer" />
-    <meta name="description" content="Portfolio of Saurabh Yadav, a Computer Science undergraduate and Full-Stack Developer building modern, secure, and real-time web applications." />
-    <meta name="keywords" content="Saurabh Yadav, Full Stack Developer, Software Engineer, React, Node.js, Express, MongoDB, Socket.IO, Computer Science, IMS Engineering College" />
-    <meta name="author" content="Saurabh Yadav" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Saurabh Yadav | Full-Stack Developer" />
-    <meta property="og:description" content="Portfolio of Saurabh Yadav, a Computer Science undergraduate and Full-Stack Developer building modern, secure, and real-time web applications." />
-    <meta property="og:site_name" content="Saurabh Yadav Portfolio" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Saurabh Yadav | Full-Stack Developer" />
-    <meta property="twitter:description" content="Portfolio of Saurabh Yadav, a Computer Science undergraduate and Full-Stack Developer building modern, secure, and real-time web applications." />
-
-    <!-- Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#090d16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/saurabh_profile.jpg" alt="Saurabh Yadav" class="logo-img">
+                <span>Saurabh <span class="logo-accent">Yadav</span></span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#academic" class="nav-link">Academic</a>
+                <a href="#principles" class="nav-link">Principles</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="assets/resume.html" target="_blank" class="btn-resume">
+                    <i data-lucide="file-text"></i>
+                    <span>Resume PDF</span>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="sun"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal">
+                        <div class="badge-green">
+                            <span class="pulse-dot"></span> AVAILABLE FOR SOFTWARE ENGINEERING ROLES
+                        </div>
+                        <h1 class="hero-title">
+                            Building <span class="highlight">full-stack MERN</span> web systems & real-time apps.
+                        </h1>
+                        <p class="hero-description">
+                            Computer Science Undergraduate at IMS Engineering College (Oct 2023 – Jul 2027) with deep experience in Java, React.js, Node.js, Express, MongoDB, Socket.IO, and REST APIs.
+                        </p>
+                        <div class="hero-ctas">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>Explore Projects</span>
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                            <a href="assets/resume.html" target="_blank" class="btn btn-outline">
+                                <i data-lucide="file-text"></i>
+                                <span>View Resume</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Profile Card Right -->
+                    <div class="hero-card-wrapper reveal">
+                        <div class="profile-card">
+                            <img src="assets/saurabh_profile.jpg" alt="Saurabh Yadav" class="profile-img-full">
+                            <div class="profile-card-content">
+                                <h3>Saurabh Yadav</h3>
+                                <p class="profile-degree">B.Tech CSE '27 • IMS Engineering College</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="user"></i>
+                    <span>// ABOUT ME & BACKGROUND</span>
+                </div>
+                <h2 class="section-title reveal">Engineered for Scalability & Clean Code</h2>
+                <p class="section-subtitle reveal">Computer Science Undergraduate at IMS Engineering College, Ghaziabad.</p>
+
+                <div class="about-grid">
+                    <div class="about-card-left glass-panel reveal">
+                        <div class="profile-header">
+                            <img src="assets/saurabh_profile.jpg" alt="Saurabh Yadav" class="profile-img">
+                            <div class="profile-title-group">
+                                <h3>Saurabh Yadav</h3>
+                                <p>Computer Science Engineering</p>
+                                <span style="font-size: 0.8rem; color: #94a3b8;">IMS Engineering College</span>
+                            </div>
+                        </div>
+                        <div class="about-bullets">
+                            <div class="bullet-item">
+                                <i data-lucide="check-circle" class="bullet-icon"></i>
+                                <div class="bullet-text">
+                                    <h4>Data Structures & Algorithms</h4>
+                                    <p>Strong problem-solving foundation in Java and C</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <i data-lucide="check-circle" class="bullet-icon"></i>
+                                <div class="bullet-text">
+                                    <h4>Full-Stack Web Architecture</h4>
+                                    <p>Building scalable React frontends & Node.js backends</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <i data-lucide="check-circle" class="bullet-icon"></i>
+                                <div class="bullet-text">
+                                    <h4>Real-Time Web & Security</h4>
+                                    <p>Socket.IO websockets, JWT auth, RBAC controls</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text-right reveal">
+                        <div class="paragraphs-card">
+                            <p>
+                                Computer Science undergraduate and aspiring Software Engineer with experience in full-stack and backend development using Java, JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL, and REST APIs.
+                            </p>
+                            <p>
+                                Proficient in Data Structures Algorithms, OOP, DBMS, algorithm design, time and space complexity, and computational optimization. Built secure, scalable web applications featuring JWT authentication, role-based authorization, real-time communication, and database-driven REST APIs.
+                            </p>
+                        </div>
+                        <div class="about-features-grid">
+                            <div class="feature-box">
+                                <h4><i data-lucide="layout"></i> Frontend Engineering</h4>
+                                <p>React 19, TypeScript, Tailwind CSS, Responsive UI Design</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4><i data-lucide="server"></i> Backend Systems</h4>
+                                <p>Node.js, Express.js, RESTful APIs, JWT Auth, Microservices</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4><i data-lucide="radio"></i> Real-Time Web</h4>
+                                <p>Socket.IO WebSockets, Event Sync, Live Chat & Feeds</p>
+                            </div>
+                            <div class="feature-box">
+                                <h4><i data-lucide="database"></i> Databases & Storage</h4>
+                                <p>MongoDB, GeoJSON Spatial Queries, MySQL, Prisma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Background -->
+        <section id="academic" class="academic-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>ACADEMIC BACKGROUND</span>
+                </div>
+                <h2 class="section-title reveal">Education Timeline</h2>
+                <p class="section-subtitle reveal">Degree coursework and engineering specialization at IMS Engineering College.</p>
+
+                <div class="edu-card reveal">
+                    <div class="edu-header">
+                        <div class="edu-left">
+                            <div class="edu-badge-icon">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3>Bachelor of Technology in Computer Science Engineering</h3>
+                                <div class="edu-college">
+                                    <i data-lucide="map-pin"></i>
+                                    <span>IMS Engineering College, Ghaziabad, Uttar Pradesh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edu-right">
+                            <span class="duration-tag">October 2023 – July 2027</span>
+                            <span class="location-text">Ghaziabad, India</span>
+                        </div>
+                    </div>
+                    <div class="edu-coursework">
+                        <span class="badge-green">CORE COMPUTER SCIENCE COURSEWORK</span>
+                        <div class="coursework-tag-list">
+                            <span class="course-tag">Data Structures & Algorithms (Java)</span>
+                            <span class="course-tag">Object-Oriented Programming (OOP)</span>
+                            <span class="course-tag">Database Management Systems (DBMS)</span>
+                            <span class="course-tag">Operating Systems</span>
+                            <span class="course-tag">Computer Networks</span>
+                            <span class="course-tag">Web Technologies & REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Principles -->
+        <section id="principles" class="principles-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="cpu"></i>
+                    <span>ENGINEERING PHILOSOPHY</span>
+                </div>
+                <h2 class="section-title reveal">Core Engineering Principles</h2>
+                <p class="section-subtitle reveal">Architectural standards and technical foundations driving every software system I construct.</p>
+
+                <div class="principles-grid">
+                    <div class="principle-card reveal">
+                        <div class="principle-icon">
+                            <i data-lucide="server"></i>
+                        </div>
+                        <h3>Robust MERN Backends</h3>
+                        <p>Designing secure API routes, clean Express controllers, and robust services that handle concurrent requests smoothly without downtime.</p>
+                    </div>
+                    <div class="principle-card reveal">
+                        <div class="principle-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3>Scalable Databases & GeoJSON</h3>
+                        <p>Designing relational and non-relational database schemas, indexing queries, and executing GeoJSON 2D-sphere spatial retrievals.</p>
+                    </div>
+                    <div class="principle-card reveal">
+                        <div class="principle-icon">
+                            <i data-lucide="radio"></i>
+                        </div>
+                        <h3>Real-Time Event Streams</h3>
+                        <p>Streaming low-latency WebSockets via Socket.IO for synchronized video playback, live chat rooms, and role-based notification channels.</p>
+                    </div>
+                    <div class="principle-card reveal">
+                        <div class="principle-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Security & Auth Pipeline</h3>
+                        <p>Enforcing JWT token verification, Role-Based Access Control (RBAC), bcrypt password hashing, and secure RESTful endpoint protection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="projects-header-bar reveal">
+                    <div>
+                        <div class="section-tag">
+                            <i data-lucide="code-2"></i>
+                            <span>// FEATURED PROJECTS</span>
+                        </div>
+                        <h2 class="section-title">Work & Real-Time Case Studies</h2>
+                        <p class="section-subtitle">Full-stack web applications built with React, Node.js, Express, MongoDB, and Socket.IO.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid View -->
+                <div id="view-gallery" class="projects-grid">
+                    <!-- Project 1: SyncParty -->
+                    <article class="project-card reveal">
+                        <div class="project-card-body">
+                            <span class="project-type-badge">Full-Stack MERN Project</span>
+                            <div>
+                                <h3 class="project-card-title">SyncParty</h3>
+                                <p class="project-card-subtitle">Synchronized Watch Rooms & Live Chat</p>
+                            </div>
+                            <p class="project-card-desc">
+                                Built a full-stack MERN application with synchronized YouTube playback and real-time chat using Socket.IO, supporting 10+ concurrent users across shared watch rooms.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="tech-pill">React.js</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">Express.js</span>
+                                <span class="tech-pill">MongoDB</span>
+                                <span class="tech-pill">Socket.IO</span>
+                                <span class="tech-pill">JWT</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-primary w-full open-modal-btn" data-modal="modal-syncparty">
+                                <i data-lucide="eye"></i>
+                                <span>View Case Study</span>
+                            </button>
+                            <div style="display: flex; gap: 8px; width: 100%;">
+                                <a href="https://github.com/saurabh-yadav16/SyncParty---Real-Time-Synced-YouTube-Watch-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="github"></i> GitHub Repo
+                                </a>
+                                <a href="https://web3task-1yke.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: FoodCare -->
+                    <article class="project-card reveal">
+                        <div class="project-card-body">
+                            <span class="project-type-badge">Geospatial MERN Platform</span>
+                            <div>
+                                <h3 class="project-card-title">FoodCare</h3>
+                                <p class="project-card-subtitle">Food Redistribution & GeoJSON Matching</p>
+                            </div>
+                            <p class="project-card-desc">
+                                Architected a full-stack MERN food redistribution platform connecting restaurants, NGOs, and volunteers through role-based donation workflows and GeoJSON queries.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="tech-pill">React.js</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">MongoDB GeoJSON</span>
+                                <span class="tech-pill">Socket.IO</span>
+                                <span class="tech-pill">JWT</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-primary w-full open-modal-btn" data-modal="modal-foodcare">
+                                <i data-lucide="eye"></i>
+                                <span>View Case Study</span>
+                            </button>
+                            <div style="display: flex; gap: 8px; width: 100%;">
+                                <a href="https://github.com/saurabh-yadav16/Food-Waste-Management-System" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="github"></i> GitHub Repo
+                                </a>
+                                <a href="https://food-waste-management-system-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: AI Interview Coach -->
+                    <article class="project-card reveal">
+                        <div class="project-card-body">
+                            <span class="project-type-badge">AI Platform</span>
+                            <div>
+                                <h3 class="project-card-title">AI Interview Coach</h3>
+                                <p class="project-card-subtitle">Mock Interviews & ATS Resume Scoring</p>
+                            </div>
+                            <p class="project-card-desc">
+                                Full-stack MERN AI Interview Coach integrating OpenAI API for 3 core AI features: personalized mock interviews, resume-based question generation, and ATS analysis.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span class="tech-pill">React.js</span>
+                                <span class="tech-pill">Vite</span>
+                                <span class="tech-pill">OpenAI API</span>
+                                <span class="tech-pill">MongoDB Atlas</span>
+                                <span class="tech-pill">bcrypt</span>
+                            </div>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-primary w-full open-modal-btn" data-modal="modal-ai-coach">
+                                <i data-lucide="eye"></i>
+                                <span>View Case Study</span>
+                            </button>
+                            <div style="display: flex; gap: 8px; width: 100%;">
+                                <a href="https://github.com/saurabh-yadav16/AI-Interview-Coach" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="github"></i> GitHub Repo
+                                </a>
+                                <a href="https://ai-interview-coach-eta-sandy.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs py-2" style="flex:1;">
+                                    <i data-lucide="external-link"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skillset & Tech Stack -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="code"></i>
+                    <span>// TECHNICAL SKILLSET & TECH STACK</span>
+                </div>
+                <h2 class="section-title reveal">Tools, Languages & Frameworks</h2>
+                <p class="section-subtitle reveal">Categorized technical stack based on verified resume experience.</p>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="terminal"></i></div>
+                                <h3>Languages</h3>
+                            </div>
+                            <p class="cat-desc">Languages and problem-solving tools I use for backend logic and algorithm design.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">☕</span> Java</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">JS</span> JavaScript</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">TS</span> TypeScript</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">C</span> C</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">SQL</span> SQL</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="layout"></i></div>
+                                <h3>Frontend</h3>
+                            </div>
+                            <p class="cat-desc">Frontend technologies used for creating responsive user interfaces and modern SPA workflows.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">⚛️</span> React.js</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🎨</span> Tailwind CSS</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🌐</span> HTML5</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🎯</span> CSS3</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">📄</span> EJS</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">⚡</span> Vite</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="server"></i></div>
+                                <h3>Backend</h3>
+                            </div>
+                            <p class="cat-desc">Backend architectures, event-driven web services, and real-time communication engines.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">🟢</span> Node.js</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">⚡</span> Express.js</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🔌</span> REST APIs</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">📻</span> Socket.IO</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="database"></i></div>
+                                <h3>Databases</h3>
+                            </div>
+                            <p class="cat-desc">Database systems, ORMs, GeoJSON spatial indexing, and persistent data engines.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">🍃</span> MongoDB</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🐬</span> MySQL</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">☁️</span> MongoDB Atlas</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">💎</span> Prisma</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">📐</span> Mongoose</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Authentication & Security -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="shield-check"></i></div>
+                                <h3>Auth & Security</h3>
+                            </div>
+                            <p class="cat-desc">Security protocols, role-based access control (RBAC), session tokens, and password encryption.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">🔑</span> JWT</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🛡️</span> RBAC</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🔐</span> GitHub OAuth</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🔒</span> bcrypt</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Developer Workflows -->
+                    <div class="skill-cat-card reveal">
+                        <div>
+                            <div class="cat-title-row">
+                                <div class="cat-icon"><i data-lucide="wrench"></i></div>
+                                <h3>Tools & Tools</h3>
+                            </div>
+                            <p class="cat-desc">Workflow tools that help debug, compile, test, and control code versions.</p>
+                            <div class="skills-item-wrap">
+                                <div class="skill-badge"><span class="skill-badge-icon">🔀</span> Git</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🐙</span> GitHub</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">💻</span> VS Code</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">🚀</span> Postman</div>
+                                <div class="skill-badge"><span class="skill-badge-icon">💡</span> IntelliJ IDEA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="award"></i>
+                    <span>// CREDENTIALS & CERTIFICATIONS</span>
+                </div>
+                <h2 class="section-title reveal">Professional Certifications</h2>
+                <p class="section-subtitle reveal">Industry-recognized credentials validating full-stack development and data analysis expertise.</p>
+
+                <div class="certs-grid">
+                    <div class="cert-card reveal">
+                        <div>
+                            <div class="cert-header">
+                                <div class="cert-icon-box">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <span class="cert-year-badge">2026</span>
+                            </div>
+                            <h3 class="cert-title">Exploratory Data Analysis</h3>
+                            <p class="cert-issuer">Issued by: NASSCOM</p>
+                            <p style="font-size: 0.88rem; color: #94a3b8;">Statistical data exploration, trend extraction, and analytical modeling skills.</p>
+                        </div>
+                        <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-green); font-weight: 700;">
+                            ✓ Verified Credential
+                        </div>
+                    </div>
+
+                    <div class="cert-card reveal">
+                        <div>
+                            <div class="cert-header">
+                                <div class="cert-icon-box">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <span class="cert-year-badge">2026</span>
+                            </div>
+                            <h3 class="cert-title">Full Stack Development with MERN</h3>
+                            <p class="cert-issuer">Issued by: NASSCOM Foundation</p>
+                            <p style="font-size: 0.88rem; color: #94a3b8;">Comprehensive MERN architecture, REST API design, and web application deployment.</p>
+                        </div>
+                        <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-green); font-weight: 700;">
+                            ✓ Verified Credential
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-tag reveal">
+                    <i data-lucide="send"></i>
+                    <span>// CONTACT ME</span>
+                </div>
+                <h2 class="section-title reveal">Let's Build Something Together</h2>
+                <p class="section-subtitle reveal">Open to Software Engineer, Full-Stack Developer, and Backend Developer roles.</p>
+
+                <div class="contact-grid">
+                    <div class="reveal" style="display: flex; flex-direction: column; gap: 16px;">
+                        <a href="mailto:saurabhyadav082005@gmail.com" class="contact-link-card">
+                            <div class="contact-link-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <span style="font-size: 0.75rem; color: #64748b; font-family: var(--font-mono); font-weight: 700;">EMAIL DIRECTLY</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 800; color: #fff;">saurabhyadav082005@gmail.com</h4>
+                            </div>
+                        </a>
+
+                        <a href="tel:+918052680534" class="contact-link-card">
+                            <div class="contact-link-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <span style="font-size: 0.75rem; color: #64748b; font-family: var(--font-mono); font-weight: 700;">CALL / WHATSAPP</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 800; color: #fff;">+91-8052680534</h4>
+                            </div>
+                        </a>
+
+                        <div class="contact-link-card">
+                            <div class="contact-link-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <span style="font-size: 0.75rem; color: #64748b; font-family: var(--font-mono); font-weight: 700;">LOCATION</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 800; color: #fff;">Ghaziabad, Uttar Pradesh, India</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card reveal">
+                        <form id="contact-form" style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div>
+                                    <label style="display: block; font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">YOUR NAME *</label>
+                                    <input type="text" id="form-name" class="form-input-box" placeholder="John Doe" required>
+                                </div>
+                                <div>
+                                    <label style="display: block; font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">YOUR EMAIL *</label>
+                                    <input type="email" id="form-email" class="form-input-box" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">SUBJECT</label>
+                                <input type="text" id="form-subject" class="form-input-box" placeholder="Software Engineering Inquiry">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono); margin-bottom: 6px;">MESSAGE</label>
+                                <textarea id="form-message" class="form-input-box" rows="4" placeholder="Hello Saurabh, we are interested in discussing..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-flex">
+            <p class="footer-text">&copy; 2026 Saurabh Yadav. Built with MERN Stack & Engineering Details.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CASE STUDY MODALS -->
+    
+    <!-- Modal 1: SyncParty -->
+    <div id="modal-syncparty" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                <button class="modal-close-btn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+                <div style="margin-bottom: 20px;">
+                    <span class="badge-green">SYNCHRONIZED WATCH ROOM & CHAT</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-top: 8px;">SyncParty Architecture</h2>
+                </div>
+                <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+                    <a href="https://web3task-1yke.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs">
+                        <i data-lucide="external-link"></i> Live Project Demo
+                    </a>
+                    <a href="https://github.com/saurabh-yadav16/SyncParty---Real-Time-Synced-YouTube-Watch-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs">
+                        <i data-lucide="github"></i> GitHub Repository
+                    </a>
+                </div>
+                <div style="color: #94a3b8; line-height: 1.7; font-size: 0.95rem;">
+                    <p style="margin-bottom: 16px;">
+                        <strong style="color: #fff;">Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Socket.IO, Tailwind CSS, JWT
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        <strong style="color: #fff;">Key Resume Engineering Highlights:</strong>
+                    </p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px;">
+                        <li>Built a full-stack MERN application with synchronized YouTube playback and real-time chat using Socket.IO, supporting 10+ concurrent users across shared watch rooms.</li>
+                        <li>Implemented JWT authentication, password-protected rooms, and RBAC across 2 user roles (Host and Participant), with 4 MongoDB data models for persistent session and chat data.</li>
+                        <li>Created a responsive React.js + Tailwind CSS interface with dark mode, room management, and real-time event handling across 3+ core interactive features.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: FoodCare -->
+    <div id="modal-foodcare" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                <button class="modal-close-btn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+                <div style="margin-bottom: 20px;">
+                    <span class="badge-green">GEOSPATIAL REDISTRIBUTION PLATFORM</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-top: 8px;">FoodCare Architecture</h2>
+                </div>
+                <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+                    <a href="https://food-waste-management-system-seven.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs">
+                        <i data-lucide="external-link"></i> Live Project Demo
+                    </a>
+                    <a href="https://github.com/saurabh-yadav16/Food-Waste-Management-System" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs">
+                        <i data-lucide="github"></i> GitHub Repository
+                    </a>
+                </div>
+                <div style="color: #94a3b8; line-height: 1.7; font-size: 0.95rem;">
+                    <p style="margin-bottom: 16px;">
+                        <strong style="color: #fff;">Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Mongoose, Socket.IO, JWT, REST APIs, GeoJSON, Vite
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        <strong style="color: #fff;">Key Resume Engineering Highlights:</strong>
+                    </p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px;">
+                        <li>Architected a full-stack MERN food redistribution platform connecting 3 user roles—restaurants, NGOs, and volunteers through role-based donation, acceptance, and delivery workflows.</li>
+                        <li>Secured REST APIs with Express.js, JWT, RBAC, and Socket.IO, enabling real-time donation updates across 3 role-specific dashboards.</li>
+                        <li>Integrated MongoDB GeoJSON geospatial queries into a 4+ stage workflow covering donation creation, NGO matching, pickup, and delivery with notifications and status tracking.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: AI Interview Coach -->
+    <div id="modal-ai-coach" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                <button class="modal-close-btn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+                <div style="margin-bottom: 20px;">
+                    <span class="badge-green">AI PLATFORM</span>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-top: 8px;">AI Interview Coach Architecture</h2>
+                </div>
+                <div style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
+                    <a href="https://ai-interview-coach-eta-sandy.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs">
+                        <i data-lucide="external-link"></i> Live Project Demo
+                    </a>
+                    <a href="https://github.com/saurabh-yadav16/AI-Interview-Coach" target="_blank" rel="noopener noreferrer" class="btn btn-outline text-xs">
+                        <i data-lucide="github"></i> GitHub Repository
+                    </a>
+                </div>
+                <div style="color: #94a3b8; line-height: 1.7; font-size: 0.95rem;">
+                    <p style="margin-bottom: 16px;">
+                        <strong style="color: #fff;">Tech Stack:</strong> React.js, Vite, Node.js, Express.js, REST APIs, OpenAI API, MongoDB, JWT, bcrypt, MongoDB Atlas
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        <strong style="color: #fff;">Key Resume Engineering Highlights:</strong>
+                    </p>
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px;">
+                        <li>Designed a full-stack MERN AI Interview Coach integrating the OpenAI API for 3 core AI features: personalized mock interviews, resume-based question generation, and ATS analysis.</li>
+                        <li>Implemented an AI evaluation system across 5 performance metrics—correctness, technical depth, completeness, relevance, and clarity—to generate structured interview feedback and scoring.</li>
+                        <li>Configured secure REST API workflows using JWT and bcrypt with MongoDB Atlas, enabling performance analytics, progress tracking, and personalized 7-day improvement plans.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,19 +1,11 @@
-const https = require('https');
+const fs = require('fs');
 
-https.get('https://portfolio-six-umber-90.vercel.app/assets/index-BgmlvCyg.js', (res) => {
-  let data = '';
-  res.on('data', chunk => data += chunk);
-  res.on('end', () => {
-    // Find string literals in JS that look like HTML tags, sections, titles, or descriptions
-    const matches = [];
-    const reg = /"([^"]{10,150})"/g;
-    let m;
-    while ((m = reg.exec(data)) !== null) {
-      const str = m[1];
-      if (str.includes('Software') || str.includes('Developer') || str.includes('Project') || str.includes('Education') || str.includes('Skill') || str.includes('Contact') || str.includes('About') || str.includes('Experience') || str.includes('Engineering')) {
-        matches.push(str);
-      }
-    }
-    console.log('Component text strings found:', [...new Set(matches)]);
-  });
-});
+const bundlePath = 'C:\\Users\\Saurabh Yadav\\.gemini\\antigravity\\brain\\ebf10eac-d9a8-4a96-bcaa-b4ecb35ac810\\.system_generated\\steps\\67\\content.md';
+const content = fs.readFileSync(bundlePath, 'utf8');
+
+console.log("Total bundle length:", content.length);
+const tail = content.slice(-60000);
+
+console.log("Tail preview:");
+fs.writeFileSync('C:\\Users\\Saurabh Yadav\\.gemini\\antigravity\\scratch\\saurabh-yadav-portfolio\\dump_bundle_text.cjs', tail);
+console.log("Dumped tail of 60,000 bytes!");

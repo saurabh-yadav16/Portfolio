@@ -1,20 +1,13 @@
-const https = require('https');
+const fs = require('fs');
 
-https.get('https://portfolio-six-umber-90.vercel.app/assets/index-BgmlvCyg.js', (res) => {
-  let data = '';
-  res.on('data', chunk => data += chunk);
-  res.on('end', () => {
-    const textSnippets = new Set();
-    const regex = /['`"]([^'`"]{4,120})['`"]/g;
-    let m;
-    while ((m = regex.exec(data)) !== null) {
-      const s = m[1].trim();
-      if (!s.includes('http') && !s.includes('/') && !s.includes('\\') && !s.includes('{') && !s.includes('}') && !s.includes('=')) {
-        if (/^[A-Z][a-zA-Za-z0-9\s,\.\-!\?\(\)]+$/.test(s)) {
-          textSnippets.add(s);
-        }
-      }
-    }
-    console.log('Found UI labels/phrases:', Array.from(textSnippets).slice(0, 100));
-  });
+const bundlePath = 'C:\\Users\\Saurabh Yadav\\.gemini\\antigravity\\brain\\ebf10eac-d9a8-4a96-bcaa-b4ecb35ac810\\.system_generated\\steps\\67\\content.md';
+const content = fs.readFileSync(bundlePath, 'utf8');
+
+// Look for object literals or JSX text inside bundle
+const matches = content.match(/[\{\[\`"][^\{\}\[\]\`"]*(?:Saurabh|SyncParty|FoodCare|Interview|Education|Skills|Contact|IMS|React|Node|Tailwind|MERN|Projects|Experience|Certifications|Github|Live|About)[^\{\}\[\]\`"]*[\`"\}\]]/gi) || [];
+
+console.log("Found matches count:", matches.length);
+matches.slice(0, 80).forEach((m, idx) => {
+  console.log(`\n--- Match ${idx+1} ---`);
+  console.log(m.slice(0, 300));
 });
