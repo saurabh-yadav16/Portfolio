@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Yadav - Resume</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #111;
+            background: #fff;
+            line-height: 1.5;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #111;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .contact {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #333;
+        }
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .item-sub {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+        .tech-stack {
+            font-size: 13px;
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 4px;
+        }
+        ul {
+            margin: 4px 0 12px 20px;
+            padding: 0;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        .skills-table {
+            font-size: 13px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .skills-table td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+        .skills-table td.label {
+            font-weight: bold;
+            width: 140px;
+        }
+        @media print {
+            body { padding: 0; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print" style="text-align: right; margin-bottom: 20px;">
+        <button onclick="window.print()" style="padding: 8px 16px; background: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Print / Save as PDF</button>
+    </div>
+
+    <div class="header">
+        <div class="name">Saurabh Yadav</div>
+        <div class="contact">
+            +91-8052680534 &nbsp;|&nbsp; 
+            <a href="mailto:saurabhyadav082005@gmail.com">saurabhyadav082005@gmail.com</a> &nbsp;|&nbsp; 
+            <a href="https://linkedin.com">LinkedIn</a> &nbsp;|&nbsp; 
+            <a href="https://github.com/saurabh-yadav16">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section-title">Professional Summary</div>
+    <p style="font-size: 13px; margin: 0 0 15px 0;">
+        Computer Science undergraduate and aspiring Software Engineer with experience in full-stack and backend development using Java, JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL, and REST APIs. Proficient in Data Structures Algorithms, OOP, DBMS, algorithm design, time and space complexity, and computational optimization. Built secure, scalable web applications featuring JWT authentication, role-based authorization, real-time communication, and database-driven REST APIs.
+    </p>
+
+    <div class="section-title">Education</div>
+    <div class="item-header">
+        <span>IMS Engineering College</span>
+        <span>October 2023 – July 2027</span>
+    </div>
+    <div class="item-sub">
+        <span>Bachelor of Technology in Computer Science Engineering</span>
+        <span>Ghaziabad, Uttar Pradesh</span>
+    </div>
+
+    <div class="section-title">Projects</div>
+    
+    <!-- SyncParty -->
+    <div class="item-header">
+        <span>SyncParty</span>
+        <span>GitHub &nbsp;|&nbsp; Live</span>
+    </div>
+    <div class="tech-stack">React.js, Node.js, Express.js, MongoDB, Socket.IO, Tailwind CSS, JWT</div>
+    <ul>
+        <li>Built a full-stack MERN application with synchronized YouTube playback and real-time chat using Socket.IO, supporting 10+ concurrent users across shared watch rooms.</li>
+        <li>Implemented JWT authentication, password-protected rooms, and RBAC across 2 user roles (Host and Participant), with 4 MongoDB data models for persistent session and chat data.</li>
+        <li>Created a responsive React.js + Tailwind CSS interface with dark mode, room management, and real-time event handling across 3+ core interactive features.</li>
+    </ul>
+
+    <!-- FoodCare -->
+    <div class="item-header">
+        <span>FoodCare</span>
+        <span>GitHub &nbsp;|&nbsp; Live</span>
+    </div>
+    <div class="tech-stack">React.js, Node.js, Express.js, MongoDB, Mongoose, Socket.IO, JWT, REST APIs, GeoJSON, Vite</div>
+    <ul>
+        <li>Architected a full-stack MERN food redistribution platform connecting 3 user roles—restaurants, NGOs, and volunteers through role-based donation, acceptance, and delivery workflows.</li>
+        <li>Secured REST APIs with Express.js, JWT, RBAC, and Socket.IO, enabling real-time donation updates across 3 role-specific dashboards.</li>
+        <li>Integrated MongoDB GeoJSON geospatial queries into a 4+ stage workflow covering donation creation, NGO matching, pickup, and delivery with notifications and status tracking.</li>
+    </ul>
+
+    <!-- AI Interview Coach -->
+    <div class="item-header">
+        <span>AI Interview Coach</span>
+        <span>GitHub &nbsp;|&nbsp; Live</span>
+    </div>
+    <div class="tech-stack">React.js, Vite, Node.js, Express.js, REST APIs, OpenAI API, MongoDB, JWT, bcrypt, MongoDB Atlas</div>
+    <ul>
+        <li>Designed a full-stack MERN AI Interview Coach integrating the OpenAI API for 3 core AI features: personalized mock interviews, resume-based question generation, and ATS analysis.</li>
+        <li>Implemented an AI evaluation system across 5 performance metrics—correctness, technical depth, completeness, relevance, and clarity—to generate structured interview feedback and scoring.</li>
+        <li>Configured secure REST API workflows using JWT and bcrypt with MongoDB Atlas, enabling performance analytics, progress tracking, and personalized 7-day improvement plans.</li>
+    </ul>
+
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+        <tr>
+            <td class="label">Languages:</td>
+            <td>Java, JavaScript, TypeScript, C, SQL, HTML5, CSS3</td>
+        </tr>
+        <tr>
+            <td class="label">Frontend:</td>
+            <td>React.js, Tailwind CSS, EJS, Responsive Web Design</td>
+        </tr>
+        <tr>
+            <td class="label">Backend:</td>
+            <td>Node.js, Express.js, REST APIs, Socket.IO</td>
+        </tr>
+        <tr>
+            <td class="label">Databases:</td>
+            <td>MongoDB, MySQL, MongoDB Atlas, Mongoose, Prisma, Database Design</td>
+        </tr>
+        <tr>
+            <td class="label">Authentication:</td>
+            <td>JWT, Role-Based Access Control (RBAC), GitHub OAuth, bcrypt</td>
+        </tr>
+        <tr>
+            <td class="label">Tools:</td>
+            <td>Git, GitHub, VS Code, Postman, IntelliJ IDEA, Vite</td>
+        </tr>
+        <tr>
+            <td class="label">Core CS:</td>
+            <td>Data Structures Algorithms (Java), Object-Oriented Programming (OOP), Database Management Systems (DBMS), Operating Systems, Computer Networks</td>
+        </tr>
+    </table>
+
+    <div class="section-title">Certifications</div>
+    <ul>
+        <li>Exploratory Data Analysis — NASSCOM | 2026</li>
+        <li>Full Stack Development with MERN — NASSCOM Foundation | 2026</li>
+    </ul>
+</body>
+</html>

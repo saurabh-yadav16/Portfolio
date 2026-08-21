@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-fc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091412"/>
+      <stop offset="50%" stop-color="#0f2620"/>
+      <stop offset="100%" stop-color="#091412"/>
+    </linearGradient>
+    <linearGradient id="emerald-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="map-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.2)"/>
+      <stop offset="100%" stop-color="rgba(20, 184, 166, 0.05)"/>
+    </linearGradient>
+    <filter id="shadow-fc" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg-grad-fc)"/>
+  <circle cx="200" cy="200" r="280" fill="#10b981" opacity="0.08" filter="blur(60px)"/>
+  <circle cx="950" cy="550" r="250" fill="#06b6d4" opacity="0.08" filter="blur(60px)"/>
+
+  <!-- Main Container -->
+  <g filter="url(#shadow-fc)" transform="translate(60, 50)">
+    <rect width="1080" height="650" rx="16" fill="#111c19" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+    <!-- Header Bar -->
+    <rect width="1080" height="48" rx="16" fill="#162622"/>
+    <rect y="36" width="1080" height="12" fill="#162622"/>
+    <circle cx="30" cy="24" r="6" fill="#ff5f56"/>
+    <circle cx="50" cy="24" r="6" fill="#ffbd2e"/>
+    <circle cx="70" cy="24" r="6" fill="#27c93f"/>
+    <text x="540" y="29" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">FoodCare • GeoJSON MERN Food Redistribution Platform</text>
+    
+    <rect x="910" y="14" width="140" height="22" rx="11" fill="rgba(16, 185, 129, 0.2)"/>
+    <circle cx="924" cy="25" r="4" fill="#10b981"/>
+    <text x="935" y="29" fill="#10b981" font-family="system-ui, sans-serif" font-size="11" font-weight="700">3 DASHBOARDS LIVE</text>
+
+    <!-- Top Metric Cards Row -->
+    <g transform="translate(24, 70)">
+      <!-- Metric 1 -->
+      <rect width="240" height="84" rx="10" fill="#192b26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="16" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Total Surplus Meals</text>
+      <text x="16" y="62" fill="#10b981" font-family="system-ui, sans-serif" font-size="26" font-weight="800">4,850+</text>
+
+      <!-- Metric 2 -->
+      <rect x="256" width="240" height="84" rx="10" fill="#192b26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="272" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Matched NGOs (5km Radius)</text>
+      <text x="272" y="62" fill="#14b8a6" font-family="system-ui, sans-serif" font-size="26" font-weight="800">38 Active</text>
+
+      <!-- Metric 3 -->
+      <rect x="512" width="240" height="84" rx="10" fill="#192b26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="528" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">Active Deliveries</text>
+      <text x="528" y="62" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="26" font-weight="800">14 In-Progress</text>
+
+      <!-- Metric 4 -->
+      <rect x="768" width="264" height="84" rx="10" fill="#192b26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="784" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">GeoJSON Matching Speed</text>
+      <text x="784" y="62" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="26" font-weight="800">&lt; 45ms</text>
+    </g>
+
+    <!-- Main GeoJSON Map Area (Left 65%) -->
+    <g transform="translate(24, 174)">
+      <rect width="680" height="440" rx="12" fill="#0d1815" stroke="rgba(255,255,255,0.08)"/>
+      <rect width="680" height="440" rx="12" fill="url(#map-glow)"/>
+      
+      <!-- Grid/Map Lines -->
+      <path d="M 0,100 Q 300,150 680,80 M 0,260 Q 400,200 680,300 M 0,380 Q 200,320 680,390" stroke="rgba(16, 185, 129, 0.15)" stroke-width="2" fill="none"/>
+      <path d="M 150,0 Q 200,200 180,440 M 360,0 Q 320,250 380,440 M 520,0 Q 550,180 500,440" stroke="rgba(16, 185, 129, 0.15)" stroke-width="2" fill="none"/>
+
+      <!-- GeoJSON 5km Radius Circle -->
+      <circle cx="340" cy="220" r="140" fill="rgba(16, 185, 129, 0.08)" stroke="#10b981" stroke-width="2" stroke-dasharray="6,4"/>
+      <circle cx="340" cy="220" r="8" fill="#10b981"/>
+      <circle cx="340" cy="220" r="18" fill="none" stroke="#10b981" opacity="0.6"/>
+
+      <!-- Map Pin 1: Restaurant (Donor) -->
+      <g transform="translate(340, 220)">
+        <rect x="-60" y="-45" width="120" height="24" rx="12" fill="#10b981"/>
+        <text x="0" y="-29" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">📍 Donor: Hotel Royal</text>
+      </g>
+
+      <!-- Map Pin 2: NGO Match 1 -->
+      <g transform="translate(240, 160)">
+        <circle cx="0" cy="0" r="6" fill="#14b8a6"/>
+        <line x1="0" y1="0" x2="100" y2="60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="-70" y="-30" width="110" height="20" rx="10" fill="#14b8a6"/>
+        <text x="-15" y="-16" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">NGO: Hope Care</text>
+      </g>
+
+      <!-- Map Pin 3: Volunteer Driver -->
+      <g transform="translate(420, 280)">
+        <circle cx="0" cy="0" r="6" fill="#38bdf8"/>
+        <line x1="-80" y1="-60" x2="0" y2="0" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="-65" y="10" width="130" height="20" rx="10" fill="#38bdf8"/>
+        <text x="0" y="24" fill="#000000" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">🚴 Volunteer Pickup</text>
+      </g>
+
+      <text x="20" y="420" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="12">GeoSpatial Index: 2D Sphere Index ($near / 5000 meters)</text>
+    </g>
+
+    <!-- Right Workflow Stages (Right 35%) -->
+    <g transform="translate(720, 174)">
+      <rect width="336" height="440" rx="12" fill="#162622" stroke="rgba(255,255,255,0.06)"/>
+      <text x="20" y="36" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="15" font-weight="700">4-Stage Redistribution Flow</text>
+
+      <!-- Stage 1 -->
+      <g transform="translate(20, 60)">
+        <circle cx="16" cy="16" r="16" fill="url(#emerald-teal)"/>
+        <text x="16" y="21" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">1</text>
+        <text x="44" y="16" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Donation Creation</text>
+        <text x="44" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Restaurant posts surplus food details</text>
+      </g>
+
+      <!-- Stage 2 -->
+      <g transform="translate(20, 140)">
+        <circle cx="16" cy="16" r="16" fill="url(#emerald-teal)"/>
+        <text x="16" y="21" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">2</text>
+        <text x="44" y="16" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">GeoJSON NGO Matching</text>
+        <text x="44" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Automated radius matching to nearby NGOs</text>
+      </g>
+
+      <!-- Stage 3 -->
+      <g transform="translate(20, 220)">
+        <circle cx="16" cy="16" r="16" fill="url(#emerald-teal)"/>
+        <text x="16" y="21" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">3</text>
+        <text x="44" y="16" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Volunteer Acceptance</text>
+        <text x="44" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Delivery route assigned to active volunteer</text>
+      </g>
+
+      <!-- Stage 4 -->
+      <g transform="translate(20, 300)">
+        <circle cx="16" cy="16" r="16" fill="url(#emerald-teal)"/>
+        <text x="16" y="21" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">4</text>
+        <text x="44" y="16" fill="#f3f4f6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Live Pickup & Delivery</text>
+        <text x="44" y="32" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11">Real-time status updates via Socket.IO</text>
+      </g>
+
+      <rect x="20" y="370" width="296" height="48" rx="8" fill="rgba(16, 185, 129, 0.15)"/>
+      <text x="36" y="398" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">✅ 3 Role RBAC Dashboards Active</text>
+    </g>
+  </g>
+</svg>
