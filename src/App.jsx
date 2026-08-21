@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ResumeSection from './components/ResumeSection';
 import About from './components/About';
 import Education from './components/Education';
 import Principles from './components/Principles';
@@ -9,7 +10,6 @@ import CaseStudyModal from './components/CaseStudyModal';
 import TechStack from './components/TechStack';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
-import ResumeSection from './components/ResumeSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
@@ -45,7 +45,6 @@ export default function App() {
   const handleAddProject = (newProject) => {
     const updated = [newProject, ...projectList];
     setProjectList(updated);
-    localStorage.setItem('saurabh_projects', JSON.stringify(updated));
     showToast({
       message: `Project "${newProject.title}" added to portfolio!`,
       type: 'success'
@@ -55,7 +54,6 @@ export default function App() {
   const handleDeleteProject = (projectId) => {
     const updated = projectList.filter(p => p.id !== projectId);
     setProjectList(updated);
-    localStorage.setItem('saurabh_projects', JSON.stringify(updated));
     showToast({
       message: 'Project removed from portfolio.',
       type: 'success'
@@ -64,7 +62,6 @@ export default function App() {
 
   const handleResetProjects = () => {
     setProjectList(defaultProjects);
-    localStorage.removeItem('saurabh_projects');
     showToast({
       message: 'Reset portfolio to default resume projects.',
       type: 'success'
@@ -74,7 +71,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-[#0b0f19] text-slate-100 selection:bg-[#26D868] selection:text-slate-950 font-sans overflow-x-hidden">
       
-      {/* Overall Background Animations (Moving grid, glow orbs, drifting particles, code watermarks) */}
+      {/* Overall Background Animations */}
       <AnimatedBackground />
 
       {/* Toast Notification */}
@@ -86,6 +83,10 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="relative z-10">
         <Hero onDownloadResume={handleDownloadResume} />
+        
+        {/* Exact Original Resume View Section */}
+        <ResumeSection onDownloadResume={handleDownloadResume} />
+
         <About />
         <Education />
         <Principles />
@@ -99,7 +100,6 @@ export default function App() {
         <TechStack />
         <Skills />
         <Certifications />
-        <ResumeSection onDownloadResume={handleDownloadResume} />
         <Contact onShowToast={showToast} />
       </main>
 
