@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FileText, Download, ExternalLink, Github, Eye, Sparkles, Printer, Check } from 'lucide-react';
+import { FileText, Download, ExternalLink, Eye, Sparkles, Printer, Check } from 'lucide-react';
+import { GithubIcon } from './Icons';
 import { personalInfo, projects, techStackCategories, certifications } from '../data/portfolioData';
 
 export default function ResumeSection({ onDownloadResume }) {
