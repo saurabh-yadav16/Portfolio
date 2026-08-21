@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ResumeSection from './components/ResumeSection';
 import About from './components/About';
 import Education from './components/Education';
 import Principles from './components/Principles';
@@ -83,10 +82,6 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="relative z-10">
         <Hero onDownloadResume={handleDownloadResume} />
-        
-        {/* Exact Original Resume View Section */}
-        <ResumeSection onDownloadResume={handleDownloadResume} />
-
         <About />
         <Education />
         <Principles />
