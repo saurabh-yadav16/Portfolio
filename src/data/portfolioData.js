@@ -14,7 +14,7 @@ export const personalInfo = {
   },
   social: {
     github: "https://github.com/saurabh-yadav16",
-    linkedin: "https://www.linkedin.com/in/saurabh-yadav-082005/",
+    linkedin: "https://www.linkedin.com/in/saurabh-yadav-599b6a42b/",
     email: "mailto:saurabhyadav082005@gmail.com"
   },
   targetRoles: [
