@@ -45,18 +45,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo / Brand Name */}
-          <a href="#hero" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#26D868] via-emerald-500 to-teal-400 p-[1px] shadow-lg shadow-[#26D868]/20 transition-transform group-hover:scale-105">
-              <div className="w-full h-full bg-[#0b0f19] rounded-[11px] flex items-center justify-center">
-                <span className="font-mono font-black text-lg text-[#26D868] group-hover:text-white transition-colors">SY</span>
-              </div>
+          {/* Logo / Brand Name with Profile Picture */}
+          <a href="#hero" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#26D868] via-emerald-500 to-teal-400 p-[1.5px] shadow-lg shadow-[#26D868]/30 transition-transform group-hover:scale-105 overflow-hidden">
+              <img 
+                src="/saurabh_profile.jpg" 
+                alt="Saurabh Yadav" 
+                className="w-full h-full rounded-[10px] object-cover"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#26D868] transition-colors">
                 Saurabh<span className="text-[#26D868]">.dev</span>
               </span>
-              <span className="text-[10px] text-slate-400 font-mono block -mt-1">
+              <span className="text-[11px] text-slate-300 font-mono block -mt-1 font-medium">
                 Full-Stack Software Engineer
               </span>
             </div>
